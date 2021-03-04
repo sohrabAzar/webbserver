@@ -45,14 +45,8 @@ namespace Uppgift_8__webbserver_
 
             if (MyQueue.Count > 0)
             {
-                //Console.WriteLine("message handeled");
                 MyQueue.Dequeue().Invoke();
-                //Console.WriteLine($"{MyQueue.Count} messages are in queue\n");
                 messageFound = true;
-            }
-            else
-            {
-                // Console.WriteLine("queue is empty\n");
             }
 
             OnQueueChecked(messageFound);
